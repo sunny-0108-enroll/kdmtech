@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>케이디엠텍 | 플랜트 설비 설계·제작·통합 관리</title>
+<meta name="description" content="케이디엠텍은 EPC, 압력용기·열교환기·저장탱크 제작, 설치·시공·유지보수, 제조업 DX·플랫폼까지 플랜트 설비의 전 과정을 수행합니다.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 메인 시안 (샘플) — 이미지·실적·뉴스 문구는 샘플이며 실제 자료로 교체 예정 -->
+<div style="font-family:'Pretendard','Noto Sans KR',sans-serif;color:#0E1621;background:#FFFFFF;word-break:keep-all">
+
+<!-- GNB : TO-BE IA -->
+<header style="position:sticky;top:0;z-index:30;background:#FFFFFF;border-bottom:1px solid #E6EAF0">
+ <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px">
+  <a href="#top" aria-label="케이디엠텍 홈" style="display:flex;align-items:center;gap:12px;color:#0E1621">
+   <img src="img/kdm_logo.png" alt="KDM TECH" style="height:46px;width:auto;display:block">
+  </a>
+  <div class="navwrap" style="display:flex;align-self:stretch">
+   <nav style="display:flex;align-items:center"><a href="#top" class="gnb-top">사업영역</a><a href="#capability" class="gnb-top">기술역량</a><a href="#cases" class="gnb-top">주요실적</a><a href="#" class="gnb-top">품질·안전·ESG</a><a href="#" class="gnb-top">회사소개</a></nav>
+   <div class="mega">
+    <div class="wrap" style="display:flex;gap:48px;padding-top:36px;padding-bottom:44px">
+     <div style="flex:0 0 240px;display:flex;flex-direction:column;gap:10px">
+      <span style="width:28px;height:4px;background:#8BC53F"></span>
+      <span style="font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.4">플랜트 설비의<br>설계·제작·통합 관리</span>
+      <span style="font-size:14px;line-height:1.6;color:#5A6676">EPC부터 제조AX까지<br>케이디엠텍의 모든 사업</span>
+     </div>
+     <div style="flex:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px"><div style="display:flex;flex-direction:column;gap:12px"><a href="#top" style="font-size:15px;font-weight:700;color:#0E1621;padding-bottom:12px;border-bottom:2px solid #0054A6">사업영역</a><a href="#" class="mega-link">EPC</a><a href="#" class="mega-link">플랜트·장비 제작</a><a href="#" class="mega-link">설치·시공·유지보수</a><a href="#" class="mega-link">AI/DX · 제조AX</a></div><div style="display:flex;flex-direction:column;gap:12px"><a href="#capability" style="font-size:15px;font-weight:700;color:#0E1621;padding-bottom:12px;border-bottom:2px solid #0054A6">기술역량</a><a href="#" class="mega-link">설계역량</a><a href="#" class="mega-link">제작역량</a><a href="#" class="mega-link">생산설비</a><a href="#" class="mega-link">인증·자격</a><a href="#" class="mega-link">AI/DX 역량</a></div><div style="display:flex;flex-direction:column;gap:12px"><a href="#cases" style="font-size:15px;font-weight:700;color:#0E1621;padding-bottom:12px;border-bottom:2px solid #0054A6">주요실적</a><a href="#" class="mega-link">프로젝트 리스트</a><a href="#" class="mega-link">산업별 사례</a></div><div style="display:flex;flex-direction:column;gap:12px"><a href="#" style="font-size:15px;font-weight:700;color:#0E1621;padding-bottom:12px;border-bottom:2px solid #0054A6">품질·안전·ESG</a><a href="#" class="mega-link">품질관리</a><a href="#" class="mega-link">안전보건(HSE)</a><a href="#" class="mega-link">ESG</a></div><div style="display:flex;flex-direction:column;gap:12px"><a href="#" style="font-size:15px;font-weight:700;color:#0E1621;padding-bottom:12px;border-bottom:2px solid #0054A6">회사소개</a><a href="#" class="mega-link">회사개요</a><a href="#" class="mega-link">비전/경영철학</a><a href="#" class="mega-link">연혁</a><a href="#" class="mega-link">조직</a><a href="#" class="mega-link">오시는 길</a><a href="#" class="mega-link">뉴스룸</a><a href="#" class="mega-link">인증현황</a></div></div>
+    </div>
+   </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px">
+   <a href="#" class="lang" style="font-size:13px;color:#5A6676;font-weight:600">KOR / ENG</a>
+   <a href="#contact" class="lang" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:999px;background:#0054A6;color:#FFFFFF;font-size:14px;font-weight:600">문의하기</a>
+   <button type="button" class="menu-btn" id="menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mnav" style="width:44px;height:44px;align-items:center;justify-content:center;border:none;background:transparent;cursor:pointer;color:#0E1621">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+   </button>
+  </div>
+ </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="모바일 메뉴"><details><summary>사업영역</summary><a href="#">EPC</a><a href="#">플랜트·장비 제작</a><a href="#">설치·시공·유지보수</a><a href="#">AI/DX · 제조AX</a></details><details><summary>기술역량</summary><a href="#">설계역량</a><a href="#">제작역량</a><a href="#">생산설비</a><a href="#">인증·자격</a><a href="#">AI/DX 역량</a></details><details><summary>주요실적</summary><a href="#">프로젝트 리스트</a><a href="#">산업별 사례</a></details><details><summary>품질·안전·ESG</summary><a href="#">품질관리</a><a href="#">안전보건(HSE)</a><a href="#">ESG</a></details><details><summary>회사소개</summary><a href="#">회사개요</a><a href="#">비전/경영철학</a><a href="#">연혁</a><a href="#">조직</a><a href="#">오시는 길</a><a href="#">뉴스룸</a><a href="#">인증현황</a></details><a href="#contact" style="display:flex;justify-content:center;margin-top:24px;padding:16px;border-radius:999px;background:#0054A6;color:#fff;font-weight:600">문의하기</a></nav>
+
+<!-- HERO : 무엇을 하는 회사인지 -->
+<section id="top" style="position:relative;min-height:680px;display:flex;align-items:center;overflow:hidden;background:#0E1A2E">
+ <div class="hero-stage">
+  <div class="hero-frame">
+   <img src="img/hero_dx.jpg" alt="">
+   
+    <span class="node" style="left:55.38%;top:49.87%;width:30px;height:30px;--d:3.73s;--dl:3.43s"><i></i></span>
+   
+    <span class="node" style="left:51.74%;top:73.96%;width:30px;height:30px;--d:2.9s;--dl:3.42s"><i></i></span>
+   
+    <span class="node" style="left:70.86%;top:39.32%;width:22px;height:22px;--d:2.37s;--dl:2.05s"><i></i></span>
+   
+    <span class="node" style="left:62.35%;top:59.24%;width:22px;height:22px;--d:2.19s;--dl:1.21s"><i></i></span>
+   
+    <span class="node" style="left:43.02%;top:36.2%;width:18px;height:18px;--d:3.08s;--dl:3.56s"><i></i></span>
+   
+    <span class="node" style="left:50.36%;top:48.44%;width:18px;height:18px;--d:3.19s;--dl:1.58s"><i></i></span>
+   
+    <span class="node" style="left:79.14%;top:51.3%;width:30px;height:30px;--d:3.31s;--dl:2.46s"><i></i></span>
+   
+    <span class="node" style="left:74.42%;top:63.15%;width:22px;height:22px;--d:3.25s;--dl:3.33s"><i></i></span>
+   
+    <span class="node" style="left:58.5%;top:44.27%;width:18px;height:18px;--d:2.12s;--dl:0.76s"><i></i></span>
+   
+    <span class="node" style="left:43.31%;top:42.06%;width:22px;height:22px;--d:3.2s;--dl:3.11s"><i></i></span>
+   
+    <span class="node" style="left:71.44%;top:47.4%;width:26px;height:26px;--d:2.88s;--dl:3.37s"><i></i></span>
+   
+    <span class="node" style="left:78.56%;top:62.89%;width:22px;height:22px;--d:3.28s;--dl:2s"><i></i></span>
+   
+    <span class="node" style="left:65.62%;top:65.36%;width:18px;height:18px;--d:2.91s;--dl:1.11s"><i></i></span>
+   
+    <span class="node" style="left:57.56%;top:64.97%;width:18px;height:18px;--d:3.42s;--dl:1.26s"><i></i></span>
+   
+    <span class="node" style="left:64.32%;top:25.39%;width:22px;height:22px;--d:3.03s;--dl:0.12s"><i></i></span>
+   
+    <span class="node" style="left:58.79%;top:49.35%;width:18px;height:18px;--d:2.8s;--dl:3.39s"><i></i></span>
+   
+    <span class="node" style="left:47.17%;top:60.42%;width:30px;height:30px;--d:2.13s;--dl:0.07s"><i></i></span>
+   
+    <span class="node" style="left:55.74%;top:27.47%;width:18px;height:18px;--d:2.43s;--dl:3.71s"><i></i></span>
+   
+    <span class="node" style="left:53.27%;top:64.71%;width:18px;height:18px;--d:2.94s;--dl:3.92s"><i></i></span>
+   
+    <span class="node" style="left:57.99%;top:59.11%;width:30px;height:30px;--d:2.84s;--dl:2.26s"><i></i></span>
+   
+    <span class="node" style="left:42.66%;top:75.26%;width:22px;height:22px;--d:3.56s;--dl:1.08s"><i></i></span>
+   
+    <span class="node" style="left:66.93%;top:41.67%;width:18px;height:18px;--d:2.62s;--dl:0.06s"><i></i></span>
+   
+    <span class="node" style="left:76.31%;top:24.87%;width:30px;height:30px;--d:3.52s;--dl:0.47s"><i></i></span>
+   
+    <span class="node" style="left:44.4%;top:80.86%;width:22px;height:22px;--d:3.41s;--dl:0.04s"><i></i></span>
+   
+    <span class="node" style="left:72.97%;top:54.3%;width:30px;height:30px;--d:3.59s;--dl:0.71s"><i></i></span>
+   
+    <span class="node" style="left:32.99%;top:79.95%;width:22px;height:22px;--d:2.89s;--dl:0.76s"><i></i></span>
+   
+    <span class="node" style="left:25.07%;top:71.22%;width:22px;height:22px;--d:2.84s;--dl:1.54s"><i></i></span>
+   
+    <span class="node" style="left:51.02%;top:55.73%;width:30px;height:30px;--d:2.84s;--dl:0.85s"><i></i></span>
+   
+    <span class="node" style="left:60.83%;top:64.06%;width:26px;height:26px;--d:3.73s;--dl:3.9s"><i></i></span>
+   
+    <span class="node" style="left:83.07%;top:79.56%;width:26px;height:26px;--d:4s;--dl:0.08s"><i></i></span>
+   
+    <span class="node" style="left:47.02%;top:78.26%;width:22px;height:22px;--d:2.79s;--dl:3.42s"><i></i></span>
+   
+    <span class="node" style="left:64.1%;top:47.53%;width:18px;height:18px;--d:2.08s;--dl:0.59s"><i></i></span>
+   
+    <span class="node" style="left:89.17%;top:44.92%;width:30px;height:30px;--d:2.52s;--dl:3.09s"><i></i></span>
+   
+    <span class="node" style="left:46.8%;top:72.66%;width:26px;height:26px;--d:3.66s;--dl:1.54s"><i></i></span>
+   
+    <span class="node" style="left:84.3%;top:73.31%;width:18px;height:18px;--d:2.18s;--dl:2.33s"><i></i></span>
+   
+    <span class="node" style="left:71%;top:26.56%;width:22px;height:22px;--d:2.03s;--dl:1.47s"><i></i></span>
+   
+    <span class="node" style="left:39.03%;top:85.94%;width:30px;height:30px;--d:2.25s;--dl:2.35s"><i></i></span>
+   
+    <span class="node" style="left:12.65%;top:72.79%;width:22px;height:22px;--d:3.73s;--dl:0.73s"><i></i></span>
+   
+    <span class="node" style="left:53.05%;top:22.66%;width:22px;height:22px;--d:2.62s;--dl:0.91s"><i></i></span>
+   
+    <span class="node" style="left:47.46%;top:22.66%;width:22px;height:22px;--d:3.45s;--dl:0.63s"><i></i></span>
+   
+    <span class="node" style="left:85.03%;top:30.73%;width:22px;height:22px;--d:3.37s;--dl:1.55s"><i></i></span>
+   
+    <span class="node" style="left:77.69%;top:35.16%;width:30px;height:30px;--d:3.21s;--dl:1.69s"><i></i></span>
+   
+    <span class="node" style="left:60.97%;top:79.95%;width:18px;height:18px;--d:2.22s;--dl:2.05s"><i></i></span>
+   
+    <span class="node" style="left:26.45%;top:89.97%;width:26px;height:26px;--d:2.48s;--dl:2.82s"><i></i></span>
+   
+    <span class="node" style="left:57.7%;top:79.82%;width:26px;height:26px;--d:2.84s;--dl:3.62s"><i></i></span>
+   
+    <span class="node" style="left:75.94%;top:54.17%;width:30px;height:30px;--d:2.59s;--dl:0.7s"><i></i></span>
+   
+    <span class="node" style="left:25.22%;top:80.21%;width:18px;height:18px;--d:2.25s;--dl:1.92s"><i></i></span>
+   
+    <span class="node" style="left:53.34%;top:43.36%;width:18px;height:18px;--d:2.56s;--dl:3.67s"><i></i></span>
+   
+    <span class="node" style="left:65.12%;top:57.03%;width:22px;height:22px;--d:3.5s;--dl:0.28s"><i></i></span>
+   
+    <span class="node" style="left:34.88%;top:75.39%;width:30px;height:30px;--d:2.89s;--dl:0.24s"><i></i></span>
+   
+    <span class="node" style="left:17.81%;top:90.1%;width:22px;height:22px;--d:2.56s;--dl:2.12s"><i></i></span>
+   
+    <span class="node" style="left:38.81%;top:75.52%;width:22px;height:22px;--d:2.18s;--dl:0.55s"><i></i></span>
+   
+    <span class="node" style="left:12.94%;top:86.72%;width:30px;height:30px;--d:3.96s;--dl:2.63s"><i></i></span>
+   
+    <span class="node" style="left:36.48%;top:70.31%;width:22px;height:22px;--d:3.18s;--dl:3.69s"><i></i></span>
+   
+    <span class="node" style="left:73.76%;top:91.15%;width:30px;height:30px;--d:3.82s;--dl:2.8s"><i></i></span>
+   
+    <span class="node" style="left:30.52%;top:70.05%;width:18px;height:18px;--d:2.04s;--dl:2.54s"><i></i></span>
+   
+    <span class="node" style="left:68.46%;top:54.95%;width:30px;height:30px;--d:2.13s;--dl:1.24s"><i></i></span>
+   
+    <span class="node" style="left:46.58%;top:37.37%;width:22px;height:22px;--d:4s;--dl:0.3s"><i></i></span>
+   
+    <span class="node" style="left:83.65%;top:96.22%;width:26px;height:26px;--d:3.47s;--dl:3.6s"><i></i></span>
+   
+    <span class="node" style="left:48.26%;top:43.62%;width:22px;height:22px;--d:3.59s;--dl:3.66s"><i></i></span>
+   
+    <span class="spk" style="left:88.37%;top:92.32%;width:22px;height:22px;--d:2.62s;--dl:2.37s"><i></i></span>
+   
+    <span class="spk" style="left:45.71%;top:24.22%;width:14px;height:14px;--d:4.66s;--dl:2.09s"><i></i></span>
+   
+    <span class="spk" style="left:57.34%;top:23.96%;width:14px;height:14px;--d:4.65s;--dl:2.86s"><i></i></span>
+   
+    <span class="spk" style="left:69.55%;top:75.52%;width:26px;height:26px;--d:3.39s;--dl:0.06s"><i></i></span>
+   
+    <span class="spk" style="left:54.72%;top:61.33%;width:14px;height:14px;--d:2.61s;--dl:3.2s"><i></i></span>
+   
+    <span class="spk" style="left:54.65%;top:74.61%;width:22px;height:22px;--d:4.69s;--dl:3.64s"><i></i></span>
+   
+    <span class="spk" style="left:55.67%;top:35.29%;width:26px;height:26px;--d:4.83s;--dl:3.47s"><i></i></span>
+   
+    <span class="spk" style="left:75.73%;top:20.31%;width:26px;height:26px;--d:3.55s;--dl:4.19s"><i></i></span>
+   
+    <span class="spk" style="left:17.66%;top:80.21%;width:14px;height:14px;--d:3.75s;--dl:2.57s"><i></i></span>
+   
+    <span class="spk" style="left:17.37%;top:68.62%;width:22px;height:22px;--d:3.96s;--dl:2.4s"><i></i></span>
+   
+    <span class="spk" style="left:91.72%;top:44.01%;width:18px;height:18px;--d:4.89s;--dl:0.56s"><i></i></span>
+   
+    <span class="spk" style="left:41.93%;top:81.77%;width:26px;height:26px;--d:3.07s;--dl:0.06s"><i></i></span>
+   
+    <span class="spk" style="left:24.2%;top:64.32%;width:22px;height:22px;--d:2.77s;--dl:3.06s"><i></i></span>
+   
+    <span class="spk" style="left:75.15%;top:77.99%;width:18px;height:18px;--d:4.36s;--dl:1.71s"><i></i></span>
+   
+    <span class="spk" style="left:79.58%;top:34.9%;width:26px;height:26px;--d:3.7s;--dl:1.21s"><i></i></span>
+   
+    <span class="spk" style="left:62.72%;top:55.73%;width:26px;height:26px;--d:4.13s;--dl:0.99s"><i></i></span>
+   
+    <span class="spk" style="left:49.49%;top:39.06%;width:26px;height:26px;--d:4.49s;--dl:3.77s"><i></i></span>
+   
+    <span class="spk" style="left:71.08%;top:50.65%;width:18px;height:18px;--d:4.69s;--dl:1.92s"><i></i></span>
+   
+    <span class="spk" style="left:34.88%;top:79.17%;width:22px;height:22px;--d:2.95s;--dl:0.67s"><i></i></span>
+   
+    <span class="spk" style="left:85.97%;top:85.55%;width:22px;height:22px;--d:4.58s;--dl:4.24s"><i></i></span>
+   
+    <span class="spk" style="left:80.38%;top:79.56%;width:14px;height:14px;--d:4.87s;--dl:1.38s"><i></i></span>
+   
+    <span class="spk" style="left:84.59%;top:35.16%;width:18px;height:18px;--d:2.69s;--dl:2.36s"><i></i></span>
+   
+    <span class="spk" style="left:66.42%;top:87.37%;width:18px;height:18px;--d:4.56s;--dl:1.91s"><i></i></span>
+   
+    <span class="spk" style="left:44.84%;top:86.2%;width:26px;height:26px;--d:4.15s;--dl:3.58s"><i></i></span>
+   
+    <span class="spk" style="left:21%;top:75.26%;width:26px;height:26px;--d:3.23s;--dl:4.14s"><i></i></span>
+   
+    <span class="spk" style="left:68.97%;top:91.54%;width:22px;height:22px;--d:4.67s;--dl:0.21s"><i></i></span>
+   
+    <span class="spk" style="left:68.17%;top:37.24%;width:22px;height:22px;--d:3.88s;--dl:1.55s"><i></i></span>
+   
+    <span class="spk" style="left:43.1%;top:20.57%;width:14px;height:14px;--d:4.07s;--dl:2.03s"><i></i></span>
+   
+    <span class="spk" style="left:13.15%;top:80.47%;width:18px;height:18px;--d:2.46s;--dl:4.15s"><i></i></span>
+   
+    <span class="spk" style="left:85.9%;top:77.47%;width:18px;height:18px;--d:4.43s;--dl:3.98s"><i></i></span>
+   
+    <span class="spk" style="left:64.39%;top:76.82%;width:14px;height:14px;--d:3.56s;--dl:3.15s"><i></i></span>
+   
+    <span class="spk" style="left:82.12%;top:27.08%;width:22px;height:22px;--d:4.89s;--dl:3.42s"><i></i></span>
+   
+    <span class="spk" style="left:57.99%;top:53.91%;width:18px;height:18px;--d:4.54s;--dl:1.28s"><i></i></span>
+   
+    <span class="spk" style="left:9.96%;top:92.45%;width:14px;height:14px;--d:4.36s;--dl:2.67s"><i></i></span>
+   
+    <span class="spk" style="left:50.8%;top:22.66%;width:14px;height:14px;--d:2.87s;--dl:1.36s"><i></i></span>
+   
+    <span class="spk" style="left:43.6%;top:72.14%;width:22px;height:22px;--d:3.8s;--dl:4.73s"><i></i></span>
+   
+    <span class="spk" style="left:14.75%;top:87.24%;width:18px;height:18px;--d:3.42s;--dl:3.96s"><i></i></span>
+   
+    <span class="spk" style="left:28.27%;top:72.4%;width:18px;height:18px;--d:2.63s;--dl:4.66s"><i></i></span>
+   
+    <span class="spk" style="left:78.34%;top:91.15%;width:26px;height:26px;--d:2.74s;--dl:2.27s"><i></i></span>
+   
+    <span class="spk" style="left:69.55%;top:30.73%;width:14px;height:14px;--d:3.38s;--dl:2.84s"><i></i></span>
+   
+   <div class="hero-scan"></div>
+  </div>
+ </div>
+ <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,20,48,0.88) 0%,rgba(5,20,48,0.70) 36%,rgba(5,20,48,0.25) 58%,rgba(5,20,48,0) 72%),linear-gradient(0deg,rgba(5,20,48,0.35) 0%,rgba(5,20,48,0) 30%)"></div>
+ <div class="wrap" style="position:relative;width:100%;padding-top:96px;padding-bottom:200px">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:26px">
+   <span style="width:32px;height:4px;background:#8BC53F"></span>
+   <span style="font-size:14px;font-weight:600;color:#C9DAF2;letter-spacing:.06em">EPC · SHOP FABRICATION · SITE WORK · AI/DX</span>
+  </div>
+  <h1 class="hero-title" style="margin:0;font-size:64px;line-height:1.2;font-weight:700;letter-spacing:-0.035em;white-space:pre-line;max-width:1000px;color:#FFFFFF">플랜트 설비를
+설계하고, 만들고, 통합 관리합니다.</h1>
+  <p style="margin:28px 0 0;font-size:19px;line-height:1.75;color:#D5DFEC;max-width:720px">케이디엠텍은 EPC, 압력용기·열교환기·저장탱크 제작, 기계설치·배관 시공과 유지보수, 그리고 제조AX까지 플랜트 설비의 전 과정을 수행합니다.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:40px">
+   <a href="#biz" style="display:inline-flex;align-items:center;height:54px;padding:0 28px;border-radius:999px;background:#FFFFFF;color:#0E1621;font-size:16px;font-weight:600">사업영역 보기</a>
+   <a href="#" style="display:inline-flex;align-items:center;height:54px;padding:0 28px;border-radius:999px;border:1.5px solid rgba(255,255,255,0.55);color:#FFFFFF;font-size:16px;font-weight:600">회사소개서 다운로드</a>
+  </div>
+ </div>
+</section>
+
+<!-- 사업영역 4축 (히어로에 겹침) -->
+<section id="biz" style="position:relative;margin-top:-150px;padding-bottom:104px">
+ <div class="wrap">
+  <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+   
+    <a href="#" class="bizcard" style="display:flex;flex-direction:column;background:#FFFFFF;border-radius:14px;overflow:hidden;color:#0E1621;border:1px solid #E6EAF0;box-shadow:0 12px 32px rgba(14,22,33,0.08)">
+     <div style="position:relative;height:196px;overflow:hidden;background:#DDE3EA"><img class="bizimg" src="img/biz_epc.jpg" alt="EPC" style="width:100%;height:100%;display:block;object-fit:cover">
+      
+     </div>
+     <div style="padding:22px 24px 22px;display:flex;flex-direction:column;gap:8px;flex:1">
+      <span style="font-size:12px;font-weight:700;color:#0054A6;letter-spacing:.04em">01 · EPC</span>
+      <span style="font-size:21px;font-weight:700;letter-spacing:-0.02em">EPC</span>
+      <span style="font-size:15px;line-height:1.6;color:#4A5563">설계·구매·시공을 통합 수행하는 중소형·개보수·탱크 EPC</span>
+      <span class="bizmore" style="margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #EEF1F5;font-size:13px;font-weight:600;color:#5A6676">자세히 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+     </div>
+    </a>
+   
+    <a href="#" class="bizcard" style="display:flex;flex-direction:column;background:#FFFFFF;border-radius:14px;overflow:hidden;color:#0E1621;border:1px solid #E6EAF0;box-shadow:0 12px 32px rgba(14,22,33,0.08)">
+     <div style="position:relative;height:196px;overflow:hidden;background:#DDE3EA"><img class="bizimg" src="img/biz_fabrication.jpg" alt="플랜트·장비 제작" style="width:100%;height:100%;display:block;object-fit:cover">
+      
+     </div>
+     <div style="padding:22px 24px 22px;display:flex;flex-direction:column;gap:8px;flex:1">
+      <span style="font-size:12px;font-weight:700;color:#0054A6;letter-spacing:.04em">02 · SHOP FABRICATION</span>
+      <span style="font-size:21px;font-weight:700;letter-spacing:-0.02em">플랜트·장비 제작</span>
+      <span style="font-size:15px;line-height:1.6;color:#4A5563">압력용기, 열교환기, 반응기·탑조류, 저장·극저온 탱크 제작</span>
+      <span class="bizmore" style="margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #EEF1F5;font-size:13px;font-weight:600;color:#5A6676">자세히 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+     </div>
+    </a>
+   
+    <a href="#" class="bizcard" style="display:flex;flex-direction:column;background:#FFFFFF;border-radius:14px;overflow:hidden;color:#0E1621;border:1px solid #E6EAF0;box-shadow:0 12px 32px rgba(14,22,33,0.08)">
+     <div style="position:relative;height:196px;overflow:hidden;background:#DDE3EA"><img class="bizimg" src="img/biz_sitework.jpg" alt="설치·시공·유지보수" style="width:100%;height:100%;display:block;object-fit:cover">
+      
+     </div>
+     <div style="padding:22px 24px 22px;display:flex;flex-direction:column;gap:8px;flex:1">
+      <span style="font-size:12px;font-weight:700;color:#0054A6;letter-spacing:.04em">03 · SITE WORK &amp; MAINTENANCE</span>
+      <span style="font-size:21px;font-weight:700;letter-spacing:-0.02em">설치·시공·유지보수</span>
+      <span style="font-size:15px;line-height:1.6;color:#4A5563">기계설치·배관·철골 시공과 탱크 유지보수, 긴급 대응</span>
+      <span class="bizmore" style="margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #EEF1F5;font-size:13px;font-weight:600;color:#5A6676">자세히 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+     </div>
+    </a>
+   
+    <a href="#" class="bizcard" style="display:flex;flex-direction:column;background:#FFFFFF;border-radius:14px;overflow:hidden;color:#0E1621;border:1px solid #E6EAF0;box-shadow:0 12px 32px rgba(14,22,33,0.08)">
+     <div style="position:relative;height:196px;overflow:hidden;background:#DDE3EA"><img class="bizimg" src="img/biz_ax.jpg" alt="AI/DX · 제조AX" style="width:100%;height:100%;display:block;object-fit:cover">
+      
+       <span class="jj-glass"><img src="img/jajaetalk_icon.png" alt=""><span>자재톡</span></span>
+      
+     </div>
+     <div style="padding:22px 24px 22px;display:flex;flex-direction:column;gap:8px;flex:1">
+      <span style="font-size:12px;font-weight:700;color:#0054A6;letter-spacing:.04em">04 · AI · DIGITAL TRANSFORMATION</span>
+      <span style="font-size:21px;font-weight:700;letter-spacing:-0.02em">AI/DX · 제조AX</span>
+      <span style="font-size:15px;line-height:1.6;color:#4A5563">자재구매 플랫폼 「자재톡」과 수주프로젝트 ERP, AI 도입 진단부터 업무 자동화까지 제조 현장 AX 컨설팅</span>
+      <span class="bizmore" style="margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #EEF1F5;font-size:13px;font-weight:600;color:#5A6676">자세히 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+     </div>
+    </a>
+   
+  </div>
+ </div>
+</section>
+
+<!-- 시공 사례 -->
+<section id="cases" style="padding:80px 0;background:#0E1621;color:#FFFFFF">
+ <div class="wrap">
+  <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px">
+   <div>
+    <p style="margin:0 0 12px;font-size:14px;font-weight:600;color:#8BC53F;letter-spacing:.06em">PROJECT CASES</p>
+    <h2 class="sec-title" style="margin:0;font-size:40px;line-height:1.25;font-weight:700;letter-spacing:-0.03em">현장에서 증명한 시공 사례</h2>
+   </div>
+   <div id="case-filters" role="tablist" aria-label="사례 분류" style="display:flex;flex-wrap:wrap;gap:6px;padding:6px;background:#1A2534;border-radius:999px"></div>
+  </div>
+  <div id="case-feature" style="display:flex;flex-wrap:wrap;gap:20px;align-items:stretch"></div>
+  <div style="overflow-x:auto;margin-top:20px"><div id="case-list" style="display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:12px;min-width:820px"></div></div>
+  <div style="display:flex;justify-content:center;margin-top:28px">
+   <a href="#" style="display:inline-flex;align-items:center;height:48px;padding:0 26px;border-radius:999px;border:1.5px solid #3A4759;color:#FFFFFF;font-size:15px;font-weight:600">전체 실적 보기</a>
+  </div>
+ </div>
+</section>
+
+<!-- 기술역량 -->
+<section id="capability" style="padding:104px 0">
+ <div class="wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px">
+   <div>
+    <p style="margin:0 0 14px;font-size:14px;font-weight:600;color:#0054A6;letter-spacing:.06em">CAPABILITY</p>
+    <h2 class="sec-title" style="margin:0;font-size:46px;line-height:1.25;font-weight:700;letter-spacing:-0.03em">현장에서 검증된<br>다섯 가지 역량</h2>
+   </div>
+   <p style="margin:0;font-size:17px;line-height:1.7;color:#4A5563;max-width:460px">1997년 설립 이후 울산 온산공장을 기반으로 설계, 제작, 품질, 디지털 역량을 쌓아왔습니다.</p>
+  </div>
+  <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+   
+    <a href="#" style="display:flex;flex-direction:column;gap:14px;padding:32px 28px;border-radius:14px;border:1px solid #E1E6ED;color:#0E1621;min-height:240px;box-sizing:border-box">
+     <span style="width:44px;height:44px;border-radius:12px;background:#E8F0FA;color:#0054A6;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">01</span>
+     <span style="font-size:20px;font-weight:700;letter-spacing:-0.02em">설계역량</span>
+     <span style="font-size:15px;line-height:1.65;color:#4A5563">ASME·API 등 국제 코드 기반 설계와 체계적인 도면 검토·승인 프로세스</span>
+    </a>
+   
+    <a href="#" style="display:flex;flex-direction:column;gap:14px;padding:32px 28px;border-radius:14px;border:1px solid #E1E6ED;color:#0E1621;min-height:240px;box-sizing:border-box">
+     <span style="width:44px;height:44px;border-radius:12px;background:#E8F0FA;color:#0054A6;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">02</span>
+     <span style="font-size:20px;font-weight:700;letter-spacing:-0.02em">제작역량</span>
+     <span style="font-size:15px;line-height:1.65;color:#4A5563">절단·벤딩·포밍·용접·가공을 자체 공정으로 일괄 수행하는 제작 체계</span>
+    </a>
+   
+    <a href="#" style="display:flex;flex-direction:column;gap:14px;padding:32px 28px;border-radius:14px;border:1px solid #E1E6ED;color:#0E1621;min-height:240px;box-sizing:border-box">
+     <span style="width:44px;height:44px;border-radius:12px;background:#E8F0FA;color:#0054A6;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">03</span>
+     <span style="font-size:20px;font-weight:700;letter-spacing:-0.02em">생산설비</span>
+     <span style="font-size:15px;line-height:1.65;color:#4A5563">울산 온산공장의 라인 구성과 대형 기기 제작 설비</span>
+    </a>
+   
+    <a href="#" style="display:flex;flex-direction:column;gap:14px;padding:32px 28px;border-radius:14px;border:1px solid #E1E6ED;color:#0E1621;min-height:240px;box-sizing:border-box">
+     <span style="width:44px;height:44px;border-radius:12px;background:#E8F0FA;color:#0054A6;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">04</span>
+     <span style="font-size:20px;font-weight:700;letter-spacing:-0.02em">품질관리</span>
+     <span style="font-size:15px;line-height:1.65;color:#4A5563">자재 입고부터 WPS·PQR, 비파괴검사(NDE), A/S까지 이어지는 품질 체계</span>
+    </a>
+   
+    <a href="#" style="display:flex;flex-direction:column;gap:14px;padding:32px 28px;border-radius:14px;border:1px solid #E1E6ED;color:#0E1621;min-height:240px;box-sizing:border-box">
+     <span style="width:44px;height:44px;border-radius:12px;background:#E8F0FA;color:#0054A6;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">05</span>
+     <span style="font-size:20px;font-weight:700;letter-spacing:-0.02em">AI/DX 역량</span>
+     <span style="font-size:15px;line-height:1.65;color:#4A5563">AI OCR 문서·도면 처리, ERP·플랫폼 개발 실증(PoC), 제조 현장 AX 컨설팅 경험</span>
+    </a>
+   
+  </div>
+ </div>
+</section>
+
+<!-- 파트너사 -->
+<section style="padding:96px 0 72px">
+ <div class="wrap">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:40px;text-align:center">
+   <span style="font-size:14px;font-weight:600;color:#0054A6;letter-spacing:.06em">PARTNERS</span>
+   <h2 class="sec-title" style="margin:0;font-size:36px;line-height:1.3;font-weight:700;letter-spacing:-0.03em">국내외 대표 정유·석유화학·엔지니어링 기업과 함께합니다</h2>
+  </div>
+  <div class="marquee reveal" aria-label="파트너사"><div class="marquee-track"><div class="logo-cell"><img src="img/partner_soil.png" alt="S-OIL"></div><div class="logo-cell"><img src="img/partner_skinnovation.png" alt="SK이노베이션"></div><div class="logo-cell"><img src="img/partner_hec.png" alt="현대엔지니어링"></div><div class="logo-cell"><img src="img/partner_daelim.png" alt="DAELIM"></div><div class="logo-cell"><img src="img/partner_hdoilbank.png" alt="HD현대오일뱅크"></div><div class="logo-cell"><img src="img/partner_hanwha.png" alt="한화솔루션"></div><div class="logo-cell"><img src="img/partner_samsung_eng.png" alt="삼성엔지니어링"></div><div class="logo-cell"><img src="img/partner_airproducts.png" alt="Air Products"></div><div class="logo-cell"><img src="img/partner_gscaltex.png" alt="GS칼텍스"></div><div class="logo-cell"><img src="img/partner_lottechem.png" alt="롯데케미칼"></div><div class="logo-cell"><img src="img/partner_posco_enc.png" alt="포스코이앤씨"></div><div class="logo-cell"><img src="img/partner_basf.png" alt="BASF"></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_soil.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_skinnovation.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_hec.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_daelim.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_hdoilbank.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_hanwha.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_samsung_eng.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_airproducts.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_gscaltex.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_lottechem.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_posco_enc.png" alt=""></div><div class="logo-cell" aria-hidden="true"><img src="img/partner_basf.png" alt=""></div></div></div>
+ </div>
+</section>
+
+<!-- 뉴스룸 + 인증 -->
+<section style="padding:32px 0 104px">
+ <div class="wrap" style="display:flex;flex-wrap:wrap;gap:24px">
+  <div style="flex:3 1 520px;min-width:0;border:1px solid #E1E6ED;border-radius:16px;padding:36px 36px 28px;box-sizing:border-box">
+   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.02em">뉴스룸</h3>
+    <a href="#" style="font-size:14px;font-weight:600">더보기</a>
+   </div>
+   <a href="#" style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #EEF1F5;color:#0E1621;font-size:16px"><span style="flex:none;min-width:44px;text-align:center;padding:4px 10px;border-radius:999px;background:#E8F0FA;color:#0054A6;font-size:12px;font-weight:700">공지</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">케이디엠텍 홈페이지 리뉴얼 오픈 안내</span><span style="color:#8792A2;font-size:14px;flex:none">2026.10.05</span></a>
+   <a href="#" style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #EEF1F5;color:#0E1621;font-size:16px"><span style="flex:none;min-width:44px;text-align:center;padding:4px 10px;border-radius:999px;background:#EEF7E2;color:#3F7A12;font-size:12px;font-weight:700">인증</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">ISO 14001:2015 환경경영시스템 인증 갱신</span><span style="color:#8792A2;font-size:14px;flex:none">2025.11.20</span></a>
+   <a href="#" style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #EEF1F5;color:#0E1621;font-size:16px"><span style="flex:none;min-width:44px;text-align:center;padding:4px 10px;border-radius:999px;background:#FFF3DC;color:#8A5A00;font-size:12px;font-weight:700">수상</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">산업통상부 「품질경쟁력 우수기업」 4등급 선정</span><span style="color:#8792A2;font-size:14px;flex:none">2025.11.19</span></a>
+   <a href="#" style="display:flex;align-items:center;gap:14px;padding:16px 0;color:#0E1621;font-size:16px"><span style="flex:none;min-width:44px;text-align:center;padding:4px 10px;border-radius:999px;background:#EEF7E2;color:#3F7A12;font-size:12px;font-weight:700">인증</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">ASME "U2" Stamp 인증 취득 – 고압 압력용기 제작 역량 확보</span><span style="color:#8792A2;font-size:14px;flex:none">2024.10.06</span></a>
+  </div>
+  <div style="flex:2 1 360px;min-width:0;border:1px solid #E1E6ED;border-radius:16px;padding:36px;box-sizing:border-box">
+   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+    <h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.02em">인증현황</h3>
+    <a href="#" style="font-size:14px;font-weight:600">더보기</a>
+   </div>
+   <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px"><a href="#" style="display:flex;flex-direction:column;gap:10px;color:#0E1621"><span style="display:block;background:#F3F5F8;border-radius:14px;padding:10px;border:1px solid #E6EAF0"><img src="img/cert_iso14001.png" alt="ISO 14001:2015 인증서" style="width:100%;aspect-ratio:350/459;object-fit:cover;display:block;box-shadow:0 4px 12px rgba(14,22,33,0.10)"></span><span style="font-size:14px;font-weight:700;line-height:1.35">ISO 14001:2015</span><span style="font-size:12px;color:#5A6676;margin-top:-6px">환경경영시스템 · 2025.11</span></a><a href="#" style="display:flex;flex-direction:column;gap:10px;color:#0E1621"><span style="display:block;background:#F3F5F8;border-radius:14px;padding:10px;border:1px solid #E6EAF0"><img src="img/cert_quality.png" alt="품질경쟁력 우수기업 인증서" style="width:100%;aspect-ratio:350/459;object-fit:cover;display:block;box-shadow:0 4px 12px rgba(14,22,33,0.10)"></span><span style="font-size:14px;font-weight:700;line-height:1.35">품질경쟁력 우수기업</span><span style="font-size:12px;color:#5A6676;margin-top:-6px">산업통상부 · 2025.11</span></a><a href="#" style="display:flex;flex-direction:column;gap:10px;color:#0E1621"><span style="display:block;background:#F3F5F8;border-radius:14px;padding:10px;border:1px solid #E6EAF0"><img src="img/cert_asme_u2.png" alt="ASME U2 인증서" style="width:100%;aspect-ratio:350/459;object-fit:cover;display:block;box-shadow:0 4px 12px rgba(14,22,33,0.10)"></span><span style="font-size:14px;font-weight:700;line-height:1.35">ASME "U2"</span><span style="font-size:12px;color:#5A6676;margin-top:-6px">ASME · 2024.10</span></a></div>
+  </div>
+ </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" style="padding:0 0 104px">
+ <div class="wrap">
+  <div style="position:relative;overflow:hidden;background:#0B2A4E;border-radius:20px;padding:68px 60px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:32px;color:#FFFFFF"><img src="img/cta_factory.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,52,110,0.94) 0%,rgba(0,52,110,0.78) 55%,rgba(0,52,110,0.45) 100%)"></div>
+   <div style="max-width:640px;position:relative">
+    <h2 class="cta-title" style="margin:0 0 14px;font-size:40px;line-height:1.3;font-weight:700;letter-spacing:-0.03em">제작부터 시공, AX까지<br>한 번에 상담하세요.</h2>
+    <p style="margin:0;font-size:17px;line-height:1.7;color:#E1EAFB">사양서나 도면, 현장 정보를 보내주시면 담당자가 검토 후 회신드립니다.</p>
+   </div>
+   <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative">
+    <a href="#" style="display:inline-flex;align-items:center;height:56px;padding:0 30px;border-radius:999px;background:#FFFFFF;color:#0E1621;font-size:16px;font-weight:600">문의하기</a>
+    <a href="#" style="display:inline-flex;align-items:center;height:56px;padding:0 30px;border-radius:999px;border:1.5px solid rgba(255,255,255,0.6);color:#FFFFFF;font-size:16px;font-weight:600">E-Brochure 다운로드</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- Footer -->
+<footer style="border-top:1px solid #E6EAF0;padding:48px 0 56px">
+ <div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;font-size:14px;line-height:1.8;color:#5A6676">
+  <div>
+   <img src="img/kdm_logo.png" alt="KDM TECH" style="height:52px;width:auto;display:block;margin-bottom:16px"><div style="font-weight:700;font-size:15px;color:#0E1621">(주)케이디엠텍</div>
+   <div>울산광역시 울주군 온산읍 화산2길 11</div>
+   <div>TEL 052-703-1000 · E-mail kdm@kdmtech.co.kr</div>
+  </div>
+  <div style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap">
+   <a href="#" style="color:#5A6676">사업영역</a>
+   <a href="#" style="color:#5A6676">기술역량</a>
+   <a href="#" style="color:#5A6676">품질·안전·ESG</a>
+   <a href="#" style="color:#5A6676">오시는 길</a>
+   <a href="#" style="color:#5A6676">개인정보처리방침</a>
+  </div>
+ </div>
+ <div class="wrap" style="margin-top:28px;font-size:13px;color:#8792A2">© KDM TECH Co., Ltd. All rights reserved.</div>
+</footer>
+
+<a href="#contact" aria-label="문의하기" style="position:fixed;right:28px;bottom:28px;z-index:20;display:inline-flex;align-items:center;gap:8px;height:56px;padding:0 24px;border-radius:999px;background:#0054A6;color:#FFFFFF;font-size:15px;font-weight:600;box-shadow:0 8px 24px rgba(14,22,33,0.25)">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>문의하기</a>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
