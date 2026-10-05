@@ -11,6 +11,10 @@ a{color:#0054A6;text-decoration:none}a:hover{color:#003D7A}
 .mega-link{font-size:14px;color:#4A5563;line-height:1.5}
 .mega-link:hover{color:#0054A6}
 .menu-btn{display:none}
+.float-cta{position:fixed;right:28px;bottom:28px;z-index:20;display:inline-flex;align-items:center;gap:8px;height:56px;padding:0 24px;border-radius:999px;background:#0054A6;color:#FFFFFF;font-size:15px;font-weight:600;box-shadow:0 8px 24px rgba(14,22,33,0.25);transition:background .3s ease,color .3s ease,box-shadow .3s ease}
+.float-cta:hover{color:#FFFFFF}
+.float-cta.on-footer{background:#FFFFFF;color:#0E1621;box-shadow:0 8px 24px rgba(0,0,0,0.35)}
+.float-cta.on-footer:hover{color:#0E1621}
 .hero-stage{position:absolute;inset:0;overflow:hidden;container-type:size}
 .hero-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 .f1{width:max(100cqw,calc(100cqh * 1.7917));aspect-ratio:1376/768}
