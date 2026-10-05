@@ -70,6 +70,20 @@
   });
   update(false);
 
+  // 1-2) 히어로 마우스 패럴랙스
+  var hero = document.getElementById('top'), par = document.querySelector('.hero-par');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (hero && par && !reduce && window.matchMedia('(pointer: fine)').matches) {
+    var raf = 0;
+    hero.addEventListener('mousemove', function (e) {
+      var r = hero.getBoundingClientRect();
+      var dx = (e.clientX - r.left) / r.width - 0.5, dy = (e.clientY - r.top) / r.height - 0.5;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function () { par.style.setProperty('--px', (-dx * 18).toFixed(1) + 'px'); par.style.setProperty('--py', (-dy * 12).toFixed(1) + 'px'); });
+    });
+    hero.addEventListener('mouseleave', function () { par.style.setProperty('--px', '0px'); par.style.setProperty('--py', '0px'); });
+  }
+
   // 2) 모바일 메뉴
   var btn = document.getElementById('menu-btn'), nav = document.getElementById('mnav');
   if (btn && nav) {
