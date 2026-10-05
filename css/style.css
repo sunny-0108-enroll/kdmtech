@@ -24,6 +24,13 @@ a{color:#0054A6;text-decoration:none}a:hover{color:#003D7A}
 .node i{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#EFFFFF;box-shadow:0 0 8px 3px rgba(100,225,255,0.95),0 0 22px 8px rgba(40,190,255,0.45)}
 @keyframes nodePulse{0%{opacity:0;transform:translate(-50%,-50%) scale(.3)}15%{opacity:1}60%{opacity:.9;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.5)}}
 #top h1,#top p{text-shadow:0 2px 18px rgba(3,12,32,0.55)}
+.hero-par,.hero-move{position:absolute;inset:0}
+.hero-par{transform:translate3d(var(--px,0px),var(--py,0px),0);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.hero-move{animation:kenburns 28s ease-in-out 2.4s infinite alternate;transform-origin:62% 55%}
+@keyframes kenburns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.07) translate(-1.4%,-0.8%)}}
+.hero-flow{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.hero-flow path{fill:none;stroke:#DFFAFF;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:7 100;stroke-dashoffset:7;filter:drop-shadow(0 0 3px rgba(90,220,255,0.95)) drop-shadow(0 0 8px rgba(40,180,255,0.6));opacity:0;animation:flow var(--fd,4s) cubic-bezier(.45,.05,.55,.95) var(--fdl,0s) infinite}
+@keyframes flow{0%{stroke-dashoffset:7;opacity:0}8%{opacity:1}72%{opacity:1}80%{stroke-dashoffset:-100;opacity:0}100%{stroke-dashoffset:-100;opacity:0}}
 .hero-scan{position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,rgba(120,230,255,0) 40%,rgba(160,240,255,0.16) 50%,rgba(120,230,255,0) 60%);background-size:250% 100%;mix-blend-mode:screen;animation:scan 7s ease-in-out 1.5s infinite}
 @keyframes scan{0%{background-position:120% 0}60%,100%{background-position:-60% 0}}
 .marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -38,7 +45,7 @@ a{color:#0054A6;text-decoration:none}a:hover{color:#003D7A}
 @keyframes beacon{0%,100%{opacity:.15;transform:translate(-50%,-50%) scale(.7)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}}
 @keyframes heroZoom{from{transform:translate(-50%,-50%) scale(1.06)}to{transform:translate(-50%,-50%) scale(1)}}
 .hero-frame{animation:heroZoom 2.4s cubic-bezier(.2,.7,.2,1) both}
-@media (prefers-reduced-motion:reduce){.spk,.beacon,.node,.hero-frame,.hero-scan,.marquee-track{animation:none !important}.spk,.node{opacity:.6}}
+@media (prefers-reduced-motion:reduce){.spk,.beacon,.node,.hero-frame,.hero-scan,.marquee-track,.hero-move,.hero-flow path{animation:none !important}.hero-par{transition:none}.hero-flow{display:none}.spk,.node{opacity:.6}}
 .bizcard{transition:transform .3s ease,box-shadow .3s ease}
 .bizcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,22,33,0.14) !important}
 .jj-glass{position:absolute;right:10px;bottom:10px;display:flex;align-items:center;gap:5px;padding:4px 10px 4px 6px;border-radius:999px;background:rgba(14,34,66,0.28);border:1px solid rgba(255,255,255,0.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);pointer-events:none}
