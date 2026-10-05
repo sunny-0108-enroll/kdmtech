@@ -84,6 +84,15 @@
     hero.addEventListener('mouseleave', function () { pars.forEach(function (el) { el.style.setProperty('--px', '0px'); el.style.setProperty('--py', '0px'); }); });
   }
 
+  // 1-3) 푸터 위에서 문의하기 버튼 색 반전
+  var fcta = document.querySelector('.float-cta'), foot = document.getElementById('site-footer');
+  if (fcta && foot && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      var r = es[0].boundingClientRect;
+      fcta.classList.toggle('on-footer', es[0].isIntersecting && r.top < window.innerHeight - 56);
+    }, { threshold: [0, 0.05, 0.1, 0.2, 0.4, 0.6, 1] }).observe(foot);
+  }
+
   // 2) 모바일 메뉴
   var btn = document.getElementById('menu-btn'), nav = document.getElementById('mnav');
   if (btn && nav) {
