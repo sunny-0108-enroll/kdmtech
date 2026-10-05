@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>케이디엠텍 메인 B안</title>
+<meta name="description" content="케이디엠텍 홈페이지 메인 시안 B안 — 스토리텔링형 모션 구성 (내부 검토용 샘플)">
+<link rel="stylesheet" href="css/style.css?v=6">
+</head>
+<body>
+<!-- 메인 시안 B안 (샘플) — 스토리텔링·스크롤 모션형. 이미지·뉴스·실적 문구는 샘플 -->
+
+<header class="gnb" id="gnb">
+  <div class="gnb-in">
+    <a href="#top" class="gnb-logo" aria-label="케이디엠텍 홈"><img src="img/kdm_logo.png" alt="KDM TECH"></a>
+    <nav class="gnb-menu" aria-label="주 메뉴">
+      <a href="#">회사소개</a>
+      <a href="#words">사업영역</a>
+      <a href="#">기술역량</a>
+      <a href="#quick">주요실적</a>
+      <a href="#">품질·안전·ESG</a>
+    </nav>
+    <div class="gnb-util">
+      <a href="#" class="lang">KOR</a><span class="lang-sep">/</span><a href="#" class="lang dim">ENG</a>
+      <button type="button" class="icon-btn" aria-label="검색"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+      <button type="button" class="icon-btn menu-btn" aria-label="전체 메뉴"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. 스토리텔링 히어로 -->
+  <section class="story" id="top" aria-label="스토리텔링">
+    <div class="story-in">
+      <div class="story-copy">
+        <p class="story-eyebrow"><span class="bar"></span>Small but Strong, Customer First!</p>
+        <ol class="story-lines" id="storyLines">
+          <li class="on">EPC, 설계부터 시공까지</li>
+          <li>플랜트 설비를 직접 만들고</li>
+          <li>핵심 장비를 제작하며</li>
+          <li>설비 유지보수로 지키고</li>
+          <li>제조AX로 내일을 엽니다</li>
+        </ol>
+        <p class="story-sub">End-to-End Plant Solutions — from EPC to Manufacturing AX</p>
+        <div class="story-progress" aria-hidden="true"><span id="storyBar"></span></div>
+      </div>
+      <div class="story-art">
+        <canvas id="dots" aria-hidden="true"></canvas>
+        <span class="art-cap" id="artCap">EPC · ENGINEERING &amp; CONSTRUCTION</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 케이디엠텍은 지금 : 스크롤하면 카드가 화면 가득 확장 -->
+  <section class="now" id="now" aria-label="케이디엠텍은 지금">
+    <div class="now-sticky">
+      <p class="sec-label now-label">케이디엠텍은 지금</p>
+      <div class="now-card" id="nowCard">
+        <div class="now-slide on" data-i="0">
+          <img src="img/shipment.jpg" alt="대형 컬럼 출하 장면">
+          <div class="now-txt"><span class="now-tag">수상</span><h2>품질경쟁력 우수기업 선정</h2><p>산업통상부 · 2025.11</p><a href="#" class="pill-link">자세히 보기</a></div>
+        </div>
+        <div class="now-slide" data-i="1">
+          <img src="img/cta_factory.jpg" alt="온산공장 내부">
+          <div class="now-txt"><span class="now-tag">인증</span><h2>ISO 14001 환경경영시스템 갱신</h2><p>HSB Registration Services · 2025.11</p><a href="#" class="pill-link">자세히 보기</a></div>
+        </div>
+        <div class="now-slide" data-i="2">
+          <img src="img/hero_refinery.jpg" alt="정유 단지 야경">
+          <div class="now-txt"><span class="now-tag">공지</span><h2>케이디엠텍 홈페이지 리뉴얼</h2><p>2026.10</p><a href="#" class="pill-link">자세히 보기</a></div>
+        </div>
+        <button type="button" class="now-nav prev" aria-label="이전 소식"><span class="nav-txt" id="nowPrev">홈페이지 리뉴얼</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="now-nav next" aria-label="다음 소식"><span class="nav-txt" id="nowNext">ISO 14001 갱신</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="now-count"><b id="nowIdx">1</b> / 3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 대형 타이포 + 이미지 패럴랙스 : 사업영역 -->
+  <section class="words" id="words" aria-label="사업영역">
+    <article class="word-block" data-side="right">
+      <div class="word-cap"><p class="sec-label">01 · 사업영역</p><h3>EPC</h3><p>설계·구매·시공을 한 팀이 통합 수행합니다.<br>Small~Medium · Revamping · Tank EPC</p><a href="#" class="more">자세히 보기 <i>→</i></a></div>
+      <div class="word-stage"><span class="word" aria-hidden="true">EPC</span><figure class="word-img"><img src="img/biz_epc.jpg" alt="대형 타워 기기"></figure></div>
+    </article>
+    <article class="word-block" data-side="left">
+      <div class="word-cap"><p class="sec-label">02 · 사업영역</p><h3>플랜트·장비 제작</h3><p>압력용기, 열교환기, 반응기·탑조류,<br>저장·극저온 탱크를 자체 공장에서 제작합니다.</p><a href="#" class="more">자세히 보기 <i>→</i></a></div>
+      <div class="word-stage"><span class="word long" aria-hidden="true">FABRICATION</span><figure class="word-img"><img src="img/biz_fabrication.jpg" alt="열교환기 튜브시트"></figure></div>
+    </article>
+    <article class="word-block" data-side="right">
+      <div class="word-cap"><p class="sec-label">03 · 사업영역</p><h3>설치·시공·유지보수</h3><p>기계설치·배관·철골 시공과<br>탱크 유지보수, 긴급 대응까지 수행합니다.</p><a href="#" class="more">자세히 보기 <i>→</i></a></div>
+      <div class="word-stage"><span class="word long" aria-hidden="true">SITE&nbsp;WORK</span><figure class="word-img"><img src="img/biz_sitework.jpg" alt="플랜트 현장 저장탱크"></figure></div>
+    </article>
+    <article class="word-block" data-side="left">
+      <div class="word-cap"><p class="sec-label">04 · 사업영역</p><h3>AI/DX · 제조AX</h3><p>자재구매 플랫폼 「자재톡」과 수주프로젝트 ERP,<br>AI 도입 진단부터 업무 자동화까지 AX 컨설팅.</p><a href="#" class="more">자세히 보기 <i>→</i></a></div>
+      <div class="word-stage"><span class="word" aria-hidden="true">AX</span><figure class="word-img"><img src="img/biz_ax.jpg" alt="AI 기반 자재 흐름 화면"></figure></div>
+    </article>
+  </section>
+
+  <!-- 4. 바로가기 : 세로 패널 아코디언 -->
+  <section class="quick" id="quick" aria-label="케이디엠텍 바로가기">
+    <h2 class="quick-title">케이디엠텍의 다양한 모습<br><span>바로가기</span></h2>
+    <div class="acc" id="acc">
+      <a href="#" class="acc-p on"><span class="acc-bg" style="background-image:url(img/cta_factory.jpg)"></span><span class="acc-k">기술역량</span><span class="acc-t"><b>FACTORY &amp; CAPABILITY</b><em>울산 온산공장의 설계·제작·검사 역량</em></span></a>
+      <a href="#" class="acc-p"><span class="acc-bg" style="background-image:url(img/case_tank_epc.jpg)"></span><span class="acc-k">주요실적</span><span class="acc-t"><b>PROJECTS</b><em>정유·석유화학 현장에서 증명한 실적</em></span></a>
+      <a href="#" class="acc-p"><span class="acc-bg" style="background-image:url(img/case_steel.jpg)"></span><span class="acc-k">품질·안전·ESG</span><span class="acc-t"><b>QUALITY · HSE · ESG</b><em>ASME·ISO 기반의 품질과 안전</em></span></a>
+      <a href="#" class="acc-p"><span class="acc-bg" style="background-image:url(img/shipment.jpg)"></span><span class="acc-k">뉴스룸</span><span class="acc-t"><b>NEWSROOM</b><em>케이디엠텍이 전하는 가장 빠른 소식</em></span></a>
+      <a href="#" class="acc-p"><span class="acc-bg" style="background-image:url(img/hero_refinery.jpg)"></span><span class="acc-k">고객지원</span><span class="acc-t"><b>CONTACT</b><em>도면 한 장으로 시작하는 견적 상담</em></span></a>
+    </div>
+  </section>
+
+  <!-- 5. 파트너 슬라이더 -->
+  <section class="partners" aria-label="파트너">
+    <div class="partners-head">
+      <h2>국내외 대표 기업과<br>함께 만들어 왔습니다</h2>
+    </div>
+    <div class="pl-marquee"><div class="pl-row"><span class="pl-logo"><img src="img/partner_soil.png" alt="S-OIL"></span><span class="pl-logo"><img src="img/partner_skinnovation.png" alt="SK이노베이션"></span><span class="pl-logo"><img src="img/partner_gscaltex.png" alt="GS칼텍스"></span><span class="pl-logo"><img src="img/partner_hdoilbank.png" alt="HD현대오일뱅크"></span><span class="pl-logo"><img src="img/partner_hec.png" alt="현대엔지니어링"></span><span class="pl-logo"><img src="img/partner_samsung_eng.png" alt="삼성엔지니어링"></span><span class="pl-logo"><img src="img/partner_posco_enc.png" alt="포스코이앤씨"></span><span class="pl-logo"><img src="img/partner_daelim.png" alt="DL(대림)"></span><span class="pl-logo"><img src="img/partner_hanwha.png" alt="한화솔루션"></span><span class="pl-logo"><img src="img/partner_lottechem.png" alt="롯데케미칼"></span><span class="pl-logo"><img src="img/partner_basf.png" alt="BASF"></span><span class="pl-logo"><img src="img/partner_airproducts.png" alt="Air Products"></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_soil.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_skinnovation.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_gscaltex.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_hdoilbank.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_hec.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_samsung_eng.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_posco_enc.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_daelim.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_hanwha.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_lottechem.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_basf.png" alt=""></span><span class="pl-logo" aria-hidden="true"><img src="img/partner_airproducts.png" alt=""></span></div></div>
+  </section>
+</main>
+
+<footer class="foot" id="foot">
+  <div class="foot-in">
+    <div>
+      <div class="lockup"><img class="lk-kdm" src="img/kdm_logo_white.png" alt="KDM TECH"><span class="lk-div" aria-hidden="true"></span><a class="jj-bi" href="https://www.jajaetalk.com" target="_blank" rel="noopener" aria-label="자재톡 바로가기 (새 창) — 자재구매의 새로운 트렌드! 자재톡!" title="자재구매의 새로운 트렌드! 자재톡!"><img src="img/jajaetalk_lockup_white.png" alt="자재톡 — 자재 구매, 톡 하듯 간편하게"><span class="jj-tip" aria-hidden="true">자재구매의 새로운 트렌드! 자재톡!</span></a></div>
+      <p class="foot-name">(주)케이디엠텍</p>
+      <p>울산광역시 울주군 온산읍 화산2길 11</p>
+      <p>TEL 052-703-1000 · E-mail kdm@kdmtech.co.kr</p>
+    </div>
+    <nav class="foot-menu" aria-label="하단 메뉴"><a href="#words">사업영역</a><a href="#">기술역량</a><a href="#">품질·안전·ESG</a><a href="#">오시는 길</a></nav>
+  </div>
+  <div class="foot-copy"><span>© KDMTECH Co., Ltd. All rights reserved.</span></div>
+</footer>
+
+<!-- 플로팅 바 : 해시태그 + 문의 -->
+<div class="fbar" id="fbar">
+  <div class="fbar-tags">
+    <a href="files/KDMTECH_Company_Profile.pdf" download class="tag hl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>회사소개서 다운로드</a>
+    <a href="#" class="tag">#자재톡</a>
+    <a href="#" class="tag">#ASME U2 인증</a>
+    <a href="#quick" class="tag">#주요실적</a>
+  </div>
+  <a href="#" class="fbar-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span>도면이나 사양서로 견적을 문의해 보세요</span><i>→</i></a>
+</div>
+
+<script src="js/main.js?v=3"></script>
+</body>
+</html>
