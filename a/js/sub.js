@@ -1,24 +1,27 @@
 /* 서브화면 (주요실적) — 프로젝트 리스트 / 실적 상세 */
 (function () {
   var D = window.KDM_CASES || [];
-  var TYPES = ['열교환기', '압력용기', '컬럼·타워', '반응기', '현장 탱크'];
-  var PER = 9;
+  var TYPES = ['열교환기', '압력용기', '컬럼·타워', '반응기', '탱크', '배관·시공', '가열로 코일'];
+  var PER = 12;
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  function idNum(c) { return +c.id.split('-')[1] + (c.id.indexOf('CM') === 0 ? 1000 : 0); }
+  function idNum(c) { var n = +c.id.split('-')[1] || 0; return c.id.indexOf('SE') === 0 ? n + 2000 : c.id.indexOf('CM') === 0 ? n + 3000 : n; }
+  function nophoto(c) { return '<div class="noph"><span class="np-t">' + esc(c.typeEn || c.type) + '</span><b>' + esc(c.type) + '</b><span class="np-s">' + esc(c.dimension || c.period || '') + '</span><em>사진 준비 중</em></div>'; }
   function stage(c, sz) {   // 세로 사진: 원본 비율 그대로 '도면 스테이지' 위에 배치 (늘이거나 자르지 않음)
     return '<div class="stage stage-' + sz + '"><span class="st-side" aria-hidden="true">' + esc(c.itemEn) + '</span><span class="st-code" aria-hidden="true">' + esc(c.id) + '</span>' +
       '<figure class="st-photo" style="aspect-ratio:' + c.imgRatio + '"><img src="' + c.img + '" alt="' + esc(c.item) + '" loading="lazy"></figure>' +
       '<span class="st-spec" aria-hidden="true">' + esc(c.weight) + '<br>' + esc(c.dimension) + '</span></div>';
   }
   function photo(c, sz) {
+    if (!c.img) return nophoto(c);
     if (c.imgOrientation === 'portrait') return stage(c, sz || 'sm');
     return '<img src="' + c.img + '" alt="' + esc(c.item) + '" loading="lazy">';
   }
   function card(c) {
     return '<a class="pcard" href="project.html?id=' + c.id + '">' +
       '<div class="pc-img photo-fx soft">' + photo(c) + '<span class="pc-badge">' + esc(c.type) + '</span></div>' +
-      '<div class="pc-body"><h3>' + esc(c.item) + '</h3><span class="pc-client">' + esc(c.client) + ' · ' + esc(c.project) + '</span>' +
-      '<div class="pc-specs"><span>' + esc(c.weight) + '</span><span>' + esc(c.material) + '</span></div></div></a>';
+      '<div class="pc-body"><h3>' + esc(c.item) + '</h3><span class="pc-client">' + [c.client, c.project].filter(Boolean).map(esc).join(' · ') + '</span>' +
+      '<div class="pc-specs">' + [c.weight, c.material, c.scope === 'EPC' || c.scope === 'EP' ? c.scope : '', c.period].filter(Boolean).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</div>' +
+      (c.sources && c.sources.indexOf('+') > -1 ? '<span class="pc-src">홈페이지 + 2026 PQ</span>' : '') + '</div></a>';
   }
 
   /* ---------- 프로젝트 리스트 ---------- */
@@ -58,7 +61,7 @@
       if (st.view === 'table') {
         res.innerHTML = '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>사진</th><th>품목</th><th>품목명</th><th>발주처</th><th>재질</th><th class="num">중량</th><th>치수</th></tr></thead><tbody>' +
           r.map(function (c) {
-            return '<tr><td><img class="thumb" src="' + c.img + '" alt=""></td><td>' + esc(c.type) + '</td><td><a href="project.html?id=' + c.id + '">' + esc(c.item) + '</a></td><td>' + esc(c.client) + '</td><td>' + esc(c.material) + '</td><td class="num">' + esc(c.weight) + '</td><td>' + esc(c.dimension) + '</td></tr>';
+            return '<tr><td>' + (c.img ? '<img class="thumb" src="' + c.img + '" alt="">' : '<span class="thumb nothumb">-</span>') + '</td><td>' + esc(c.type) + '</td><td><a href="project.html?id=' + c.id + '">' + esc(c.item) + '</a></td><td>' + esc(c.client) + '</td><td>' + esc(c.material) + '</td><td class="num">' + esc(c.weight) + '</td><td>' + esc(c.dimension) + '</td></tr>';
           }).join('') + '</tbody></table></div>';
         document.getElementById('pager').innerHTML = '';
         return;
@@ -97,10 +100,12 @@
     var prev = list[(i - 1 + list.length) % list.length], next = list[(i + 1) % list.length];
     document.getElementById('detail').innerHTML =
       '<div class="dt"><div><div class="dt-photo photo-fx">' + photo(c, 'lg') + '</div>' +
-      '<div class="dt-thumbs">' + (c.images || [c.img]).map(function (s) { return '<button type="button" aria-label="사진 보기"><img src="' + s + '" alt=""></button>'; }).join('') +
+      '<div class="dt-thumbs">' + ((c.images && c.images.length) ? c.images : (c.img ? [c.img] : [])).map(function (s) { return '<button type="button" aria-label="사진 보기"><img src="' + s + '" alt=""></button>'; }).join('') +
       '<span class="add">사진 추가<br>등록 영역</span></div></div>' +
       '<div><span class="dt-badge">' + esc(c.division) + ' · ' + esc(c.type) + '</span><h1>' + esc(c.item) + '</h1><p class="dt-sub">' + esc(c.project) + ' · ' + esc(c.itemEn) + '</p>' +
-      '<dl class="spec">' + row('발주처', c.client, c.clientEn) + row('품목', c.type, c.typeEn) + row('재질', c.material) + row('중량', c.weight) + row('치수', c.dimension) + row('납품연도', c.year) + row('설치현장', c.site) + '</dl></div></div>' +
+      '<dl class="spec">' + row('발주처', c.client, c.clientEn) + row('품목', c.type, c.typeEn) + row('재질', c.material) + row('중량', c.weight) + row('치수', c.dimension) + row('수행 기간', c.period) + row('수행 범위', c.scope) + row('위치', c.location || c.site) + row('출처', c.sources) + '</dl>' +
+      (c.note ? '<p class="dt-note"><b>확인 필요</b> ' + esc(c.note) + '</p>' : '') +
+      (c.caseUrl ? '<a class="dt-case" href="' + c.caseUrl + '">산업별 사례에서 자세히 보기 →</a>' : '') + '</div></div>' +
       '<section class="dt-desc"><h2>프로젝트 개요</h2>' + (c.description ? '<p>' + esc(c.description) + '</p>' :
         '<div class="cms"><b>CMS 입력 영역 (description)</b><br>설계 조건, 제작 범위(설계·제작·검사·운송), 적용 코드(ASME 등), 납기 등을 2~4문장으로 입력합니다.<br>현재 홈페이지에는 해당 내용이 없어 비워 두었습니다.</div>') + '</section>' +
       '<nav class="pn" aria-label="이전·다음 실적"><a href="project.html?id=' + prev.id + '"><span>이전 실적</span><b>' + esc(prev.item) + '</b></a><a class="next" href="project.html?id=' + next.id + '"><span>다음 실적</span><b>' + esc(next.item) + '</b></a></nav>';

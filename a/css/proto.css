@@ -187,12 +187,13 @@
 
 /* ---------- 품질·안전·ESG ---------- */
 .motto{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:end}
-.motto h2{margin:0;font-size:64px;line-height:1.05;font-weight:800;letter-spacing:-.04em;color:#FFFFFF}
-.motto>div>p:last-child{margin:18px 0 0;font-size:18px;color:#C9D4E3}
-.motto-r{border-left:1px solid rgba(255,255,255,.18);padding-left:40px}
-.motto-r p{margin:0 0 22px;font-size:16px;line-height:1.8;color:#C9D4E3}
-.motto-r b{display:block;font-size:26px;line-height:1.35;font-weight:700;color:#FFFFFF}
-.motto-r em{font-style:normal;font-size:48px;font-weight:800;color:#8BC53F;letter-spacing:-.02em}
+.ps.motto-sec{padding:72px 0 64px;border-bottom:1px solid #E6EAF0}
+.motto h2{margin:0;font-size:64px;line-height:1.05;font-weight:800;letter-spacing:-.04em;color:#0B1A33}
+.motto>div>p:last-child{margin:18px 0 0;font-size:18px;color:#5A6676}
+.motto-r{border-left:1px solid #D3DAE4;padding-left:40px}
+.motto-r p{margin:0 0 22px;font-size:16px;line-height:1.8;color:#4A5563}
+.motto-r b{display:block;font-size:26px;line-height:1.35;font-weight:700;color:#0B1A33}
+.motto-r em{font-style:normal;font-size:48px;font-weight:800;color:#0054A6;letter-spacing:-.02em;box-shadow:inset 0 -14px 0 rgba(139,197,63,.35)}
 .pil{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid #0E1621}
 .pil>li{padding:26px 22px 24px;border-left:1px solid #E1E7EF;display:flex;flex-direction:column;gap:14px}
 .pil>li:first-child{border-left:0;padding-left:0}
@@ -302,3 +303,23 @@
  .org.sm .o-pair{flex-wrap:wrap;justify-content:center}
  .charter{padding:22px 20px}
 }
+.ps.motto-sec+.ps{padding-top:72px}
+.case-rel{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+.case-rel span{font-size:13px;font-weight:700;color:#5A6676;margin-right:4px}
+.case-rel a{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1.5px solid #D3DAE4;font-size:13.5px;font-weight:600;color:#0054A6;background:#FFFFFF}
+.case-rel a:hover{border-color:#0054A6}
+.case-rel small{font-size:11px;color:#8FA0B5;font-weight:600}
+/* 품목별 최대 제작 사양 */
+.mx{list-style:none;margin:0;padding:0;border-top:2px solid #0E1621}
+.mx li{display:grid;grid-template-columns:200px minmax(0,1.3fr) minmax(0,1.3fr) 110px 110px;gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid #DDE3EA}
+.mx-n b{display:block;font-size:18px;letter-spacing:-.02em}
+.mx-n span{font-size:13px;color:#8FA0B5;font-weight:600}
+.mx-v{display:grid;grid-template-columns:62px minmax(0,1fr) 96px;align-items:center;gap:12px}
+.mx-l,.mx-k span{font-size:12.5px;font-weight:700;color:#5A6676}
+.mx-bar{height:8px;border-radius:999px;background:#E3EAF3;overflow:hidden}
+.mx-bar i{display:block;height:100%;border-radius:999px;background:#0054A6}
+.mx-v b,.mx-k b{font-size:17px;font-weight:700;color:#0B1A33;font-variant-numeric:tabular-nums;text-align:right}
+.mx-k{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+.mx b small{font-size:12px;font-weight:600;color:#5A6676;margin-left:2px}
+@media (max-width:1100px){.mx li{grid-template-columns:1fr 1fr;gap:12px 20px}.mx-n{grid-column:1/-1}.mx-k{align-items:flex-start}.mx-k b{text-align:left}}
+@media (max-width:680px){.mx li{grid-template-columns:1fr}.mx-v{grid-template-columns:56px minmax(0,1fr) 84px}.mx-k{flex-direction:row;justify-content:space-between;align-items:center}}
