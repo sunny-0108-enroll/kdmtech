@@ -323,3 +323,38 @@
 .mx b small{font-size:12px;font-weight:600;color:#5A6676;margin-left:2px}
 @media (max-width:1100px){.mx li{grid-template-columns:1fr 1fr;gap:12px 20px}.mx-n{grid-column:1/-1}.mx-k{align-items:flex-start}.mx-k b{text-align:left}}
 @media (max-width:680px){.mx li{grid-template-columns:1fr}.mx-v{grid-template-columns:56px minmax(0,1fr) 84px}.mx-k{flex-direction:row;justify-content:space-between;align-items:center}}
+/* ---------- 인증·자격 (DB: data/certs.json) ---------- */
+.crt-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-bottom:24px}
+.crt-chips{display:flex;flex-wrap:wrap;gap:8px}
+.crt-chips button,.crt-tog button{font:inherit;cursor:pointer;border:1px solid #D5DCE6;background:#FFFFFF;color:#2A3646;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.crt-chips button i{font-style:normal;color:#8FA0B5;font-size:12.5px}
+.crt-chips button.on{background:#0B2A4E;border-color:#0B2A4E;color:#FFFFFF}
+.crt-chips button.on i{color:#9FB7D6}
+.crt-tog{display:inline-flex;padding:4px;border-radius:999px;background:#E8EDF3;gap:2px}
+.crt-tog button{border:0;background:transparent;color:#5A6A80}
+.crt-tog button.on{background:#FFFFFF;color:#0054A6;box-shadow:0 1px 3px rgba(11,26,51,.12)}
+.crt-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.crt{display:flex;flex-direction:column;background:#FFFFFF;border:1px solid #E1E6ED;border-radius:14px;overflow:hidden}
+.crt[hidden],.crt-list tr[hidden],.crt-grid[hidden],.crt-list[hidden],.crt-empty[hidden]{display:none}
+.crt-img{display:block;width:100%;aspect-ratio:3/4;padding:14px;box-sizing:border-box;background:#F4F7FB;border:0;border-bottom:1px solid #E6EAF0;cursor:zoom-in}
+.crt-img img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .3s ease}
+.crt-img:hover img{transform:scale(1.03)}
+.crt-img.none{display:flex;align-items:center;justify-content:center;cursor:default;color:#8FA0B5;font-size:13px;text-align:center;line-height:1.6;background:repeating-linear-gradient(135deg,#F4F7FB 0 10px,#EEF2F7 10px 20px)}
+.crt-b{padding:14px 16px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.crt-b h3{flex-basis:100%;margin:4px 0 6px;font-size:16px;line-height:1.4;letter-spacing:-.02em;color:#0E1621}
+.crt-b dl{flex-basis:100%;margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 10px;font-size:12.5px;line-height:1.5}
+.crt-b dt{color:#8FA0B5}.crt-b dd{margin:0;color:#3A4757;overflow-wrap:anywhere}
+.crt-cat{display:inline-block;padding:3px 9px;border-radius:999px;background:#E8F0FA;color:#0054A6;font-size:11.5px;font-weight:700;white-space:nowrap}
+.crt-st{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.crt-st:empty{display:none}
+.crt-st.ok{background:#EEF7E2;color:#3F7A12}.crt-st.soon{background:#FFF3DC;color:#8A5A00}.crt-st.ex{background:#FDE8E8;color:#B42318}
+.crt-list .tbl{min-width:860px}
+.crt-nm b{display:block;font-weight:700}.crt-nm small{display:block;color:#8FA0B5;font-size:12px;margin-top:2px}
+.crt-view{font:inherit;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #0054A6;color:#0054A6;background:#FFFFFF;border-radius:999px;padding:4px 12px}
+.crt-empty{color:#8FA0B5;padding:24px 0}
+.crt-dlg{border:0;border-radius:16px;padding:20px;max-width:min(92vw,760px);max-height:92vh;box-sizing:border-box;background:#FFFFFF}
+.crt-dlg::backdrop{background:rgba(11,26,51,.72)}
+.crt-dlg img{display:block;max-width:100%;max-height:calc(92vh - 110px);margin:0 auto;object-fit:contain}
+.crt-dlg p{margin:12px 0 0;text-align:center;font-weight:700;color:#0E1621}
+.crt-x{position:absolute;right:10px;top:8px;width:36px;height:36px;border:0;border-radius:50%;background:#F1F4F8;font-size:22px;line-height:1;cursor:pointer;color:#2A3646}
+@media(max-width:640px){.crt-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.crt-b{padding:10px 12px 12px}.crt-b h3{font-size:14px}.crt-b dl{grid-template-columns:1fr}.crt-b dt{display:none}.crt-bar{flex-direction:column;align-items:stretch}.crt-tog{align-self:flex-end}}
