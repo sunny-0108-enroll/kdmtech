@@ -108,6 +108,17 @@
     document.getElementById('related').innerHTML = rel.length ? '<h2>같은 품목의 다른 실적</h2><div class="grid">' + rel.map(card).join('') + '</div>' : '';
   }
 
+  /* ---------- 공통: 2단계 메뉴(LNB) — 그룹명 표시 · 스크롤 고정 시 강조 ---------- */
+  var lnb = document.querySelector('.lnb'), lin = lnb && lnb.querySelector('.lnb-in');
+  if (lin && !lin.querySelector('.lnb-t')) {
+    var g = document.querySelectorAll('.crumb a')[1];
+    if (g) { var t = document.createElement('span'); t.className = 'lnb-t'; t.textContent = g.textContent; lin.insertBefore(t, lin.firstChild); }
+  }
+  if (lnb) {
+    var stick = function () { var top = parseFloat(getComputedStyle(lnb).top) || 0; lnb.classList.toggle('stuck', lnb.getBoundingClientRect().top <= top + 0.5 && window.scrollY > 0); };
+    window.addEventListener('scroll', stick, { passive: true }); window.addEventListener('resize', stick); stick();
+  }
+
   /* ---------- 공통: 모바일 메뉴 · 문의 버튼 ---------- */
   var btn = document.getElementById('menu-btn'), nav = document.getElementById('mnav');
   if (btn && nav) {
