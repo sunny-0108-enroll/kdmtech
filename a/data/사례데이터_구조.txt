@@ -1,0 +1,45 @@
+케이디엠텍 홈페이지 — 메인 '주요 실적(사례)' 데이터 구조 (A안 기준)
+기준 데이터: 현재 홈페이지(www.kdmtech.co.kr) 사업분야 게시판 37건
+  · Static equipment 게시판 (business_part1) 34건 → 장비 제작
+  · Construction & Maintenance 게시판 (business_part2) 3건 → 현장 시공
+  · EPC 페이지는 소개 글만 있고 실적 게시물 없음
+
+파일
+  data/cases.json   시안이 읽는 데이터 (37건, 아래 필드)
+  data/cases.csv    같은 내용을 엑셀로 검토·수정할 수 있는 표
+  img/cases/        사례 사진 (현재 홈페이지 data/file/business_part1·2 원본, 테두리 제거 후 2배 리샘플)
+
+필드
+  id              SE-040 / CM-008   (SE=장비 제작, CM=현장 시공 + 기존 게시글 번호)
+  division        장비 제작 | 현장 시공 | (향후) EPC          ← 대분류(사업영역)
+  divisionEn      Static Equipment | Construction & Maintenance
+  type            열교환기 | 압력용기 | 컬럼·타워 | 반응기 | 현장 탱크   ← 기존 게시판 카테고리(한글)
+  typeEn          Heat exchanger | Pressure vessel | Column & Tower | Reactor | Field Erection Tank
+  project         S Project, KPIC ONE Project …     (기존 제목)
+  client / clientEn  발주처 한글명 / 영문명 (기존 Client 값 + 한글 표기)
+  item / itemEn   품목명 (기존 본문 문구를 품목명으로 정리)  예) 듀플렉스 스테인리스 반응기
+  material        재질 (기존 Materials)
+  weight          중량 표기 (기존 Size의 앞부분)  예) 21 ton      / weightTon 숫자(정렬용)
+  dimension       치수 (기존 Size의 뒷부분)  예) 26T × ID 2,800 × 4,000L
+  img             사진 경로 / imgOrientation  landscape | portrait(탱크 세로 사진)
+  home, homeOrder 메인 '전체' 탭에 노출할 대표 5건과 순서
+  source          기존 게시글 주소 (대조용) / sourceImage 원본 파일명 / sourceText 원문 본문
+  note            원본 확인이 필요한 항목
+
+메인 노출 규칙
+  탭: 전체 · 열교환기 · 압력용기 · 컬럼·타워 · 반응기 · 현장 탱크
+  전체 탭 = home 지정 5건 (현재: 구형 저장탱크 666t → 오버레이 열교환기 107t → 압력용기 92t → 컬럼 50t → 클래드 반응기 32t)
+  분류 탭 = 해당 품목에서 중량이 큰 순 5건
+  카드 표시: 대분류·영문 품목 / 품목명 / 프로젝트 · 영문 품목 / 발주처 · 재질 · 중량 · 치수
+
+예전 시안 대비 바뀐 점
+  · 발주처/현장/수행기간/규모/공정범위(샘플) → 발주처/재질/중량/치수 (현재 홈페이지에 있는 정보만 사용)
+  · 수행기간·현장 정보는 현재 홈페이지에 없음 → 필요하면 'year'(납품연도), 'site'(설치 현장) 필드를 추가해 채우면 됨
+  · 게시글 작성일(2018-08)은 실적 연도가 아니어서 표시하지 않음
+
+확인이 필요한 원본 데이터
+  · SE-027  재질 "A51-70" → A516-70 오기로 보임
+  · SE-024  컬럼 길이 3,620L — 다른 컬럼 대비 짧음
+  · CM-006  프로젝트명 "KIPC ONE" → KPIC ONE으로 수정해 둠
+  · 발주처 한글명은 영문을 옮긴 것 (예: KOREA Petrochemical → 대한유화, OEIC는 영문 유지) — 확인 필요
+  · 현재 홈페이지 사진은 가로 약 385px로 작음 → 실제 오픈 시 고해상도 원본 사진 교체 권장

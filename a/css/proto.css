@@ -358,3 +358,12 @@
 .crt-dlg p{margin:12px 0 0;text-align:center;font-weight:700;color:#0E1621}
 .crt-x{position:absolute;right:10px;top:8px;width:36px;height:36px;border:0;border-radius:50%;background:#F1F4F8;font-size:22px;line-height:1;cursor:pointer;color:#2A3646}
 @media(max-width:640px){.crt-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.crt-b{padding:10px 12px 12px}.crt-b h3{font-size:14px}.crt-b dl{grid-template-columns:1fr}.crt-b dt{display:none}.crt-bar{flex-direction:column;align-items:stretch}.crt-tog{align-self:flex-end}}
+/* 수상 */
+.aw-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.aw-grid .crt-img{aspect-ratio:4/5}
+.aw-all{margin-top:24px;border:1px solid #E1E6ED;border-radius:14px;background:#FFFFFF}
+.aw-all summary{cursor:pointer;padding:16px 20px;font-weight:700;color:#0054A6;list-style:none}
+.aw-all summary::-webkit-details-marker{display:none}
+.aw-all summary:after{content:" +";}
+.aw-all[open] summary:after{content:" −"}
+.aw-all .tbl-wrap{margin:0 12px 12px}
