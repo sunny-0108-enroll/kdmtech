@@ -163,3 +163,17 @@
 .dx-go .dx-eyebrow{margin:0;color:#8BC53F}
 .dx-go b{flex:1;min-width:260px;font-size:18px;letter-spacing:-.02em}
 .dx-go .go{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#C9D4E3}
+/* AX 역량 하단 — 특허 출원 */
+.pats{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:32px;margin-top:40px;padding-top:36px;border-top:2px solid #0E1621}
+.pats-h .dx-eyebrow{display:block;margin-bottom:8px}
+.pats-h b{display:block;font-size:24px;letter-spacing:-.02em}
+.pats-h em{font-style:normal;color:#0054A6}
+.pats-h p{margin:10px 0 0;font-size:14.5px;line-height:1.7;color:#5A6676}
+.pats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pats li{display:flex;flex-direction:column;gap:12px;padding:24px 24px 22px;border-radius:16px;background:#F4F7FB}
+.pat-st{align-self:flex-start;padding:4px 10px;border-radius:999px;border:1.5px solid #0054A6;color:#0054A6;font-size:12px;font-weight:700}
+.pats li>b{font-size:17px;line-height:1.5;letter-spacing:-.02em;color:#0B1A33}
+.pats dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;margin:0;font-size:14px}
+.pats dt{color:#8FA0B5;font-weight:600}.pats dd{margin:0;font-weight:700;color:#2A3646;font-variant-numeric:tabular-nums}
+.pat-rel{margin-top:auto;font-size:12.5px;font-weight:600;color:#3E6A12}
+@media (max-width:980px){.pats,.pats ul{grid-template-columns:1fr}}

@@ -386,7 +386,7 @@
 .bx-track i{font-style:normal;font-size:20px;font-weight:800;color:#0054A6}
 .bx-track b{font-size:15.5px;letter-spacing:-.02em;line-height:1.4}
 .bx-track li span{font-size:13px;line-height:1.55;color:#5A6676}
-.bx-cred{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid #0E1621;border-bottom:1px solid #D3DAE4}
+.bx-cred{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid #0E1621;border-bottom:1px solid #D3DAE4}
 .bx-cred li{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-left:1px solid #E1E7EF}
 .bx-cred li:first-child{border-left:0}
 .bx-cred span{font-size:12.5px;font-weight:700;color:#5A6676}
@@ -420,4 +420,4 @@
 .dx-go .dx-eyebrow{margin:0;color:#8BC53F}
 .dx-go b{flex:1;min-width:260px;font-size:18px;letter-spacing:-.02em}
 .dx-go .go{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#C9D4E3}
-@media(max-width:980px){.bx-nav,.bx-tracks,.bx-launch,.bx-svc{grid-template-columns:1fr}.bx-cred{grid-template-columns:repeat(2,minmax(0,1fr))}.bx-cred li:nth-child(3){border-left:0}.bx-track ol{grid-auto-flow:row}.bx-track li:not(:last-child)::after{display:none}.bx-photos{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto}.bx-photos .a{grid-column:span 2;grid-row:auto;aspect-ratio:16/9}.bx-photos figure:not(.a){aspect-ratio:4/3}.bx-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:980px){.bx-nav,.bx-tracks,.bx-launch,.bx-svc{grid-template-columns:1fr}.bx-cred{grid-template-columns:1fr}.bx-cred li{border-left:0;border-top:1px solid #E1E7EF}.bx-cred li:first-child{border-top:0}.bx-track ol{grid-auto-flow:row}.bx-track li:not(:last-child)::after{display:none}.bx-photos{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto}.bx-photos .a{grid-column:span 2;grid-row:auto;aspect-ratio:16/9}.bx-photos figure:not(.a){aspect-ratio:4/3}.bx-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
