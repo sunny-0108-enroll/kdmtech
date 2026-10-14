@@ -157,3 +157,9 @@
  .lnb-in::-webkit-scrollbar{display:none}
  .lnb a{white-space:nowrap;flex:0 0 auto}
 }
+#jajaetalk{scroll-margin-top:140px}
+.dx-go{padding-bottom:24px}
+.dx-go a{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;padding:26px 30px;border-radius:16px;background:#0B1A33;color:#FFFFFF}
+.dx-go .dx-eyebrow{margin:0;color:#8BC53F}
+.dx-go b{flex:1;min-width:260px;font-size:18px;letter-spacing:-.02em}
+.dx-go .go{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#C9D4E3}
